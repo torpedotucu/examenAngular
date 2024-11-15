@@ -1,0 +1,23 @@
+<div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">UserName</span>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username" disabled readonly
+            aria-describedby="basic-addon1" value="{{user.nombre}}">
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon2">Email</span>
+        <input type="text" class="form-control" placeholder="Email" aria-label="Email" disabled readonly
+            aria-describedby="basic-addon2" value={{user.email}}>
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon3">Password</span>
+        <input type="text" class="form-control" placeholder="Password" aria-label="Password" disabled readonly
+            aria-describedby="basic-addon3" value={{user.pass}}>
+    </div>
+    <div>
+        <a [routerLink]="['/comprar']">Comprar</a><br>
+        
+        <a [routerLink]="['/pantallaCompras']">COmpras</a>
+
+    </div>
+</div>

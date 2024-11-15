@@ -1,0 +1,13 @@
+<div>
+    @if(arrayCubos){
+        <form #ngCompras="ngForm">
+            <select #cuboSelect name="cuboSelect" id="cuboSelect" title="Cubos">
+                @for (cubo of arrayCubos; track cubo) {
+                    <option value="{{cubo.idCubo}} ">{{cubo.nombre}} </option>
+                }
+            </select>
+            <button (click)="comprar()">Comprar</button>
+        </form>
+    }
+    
+</div>

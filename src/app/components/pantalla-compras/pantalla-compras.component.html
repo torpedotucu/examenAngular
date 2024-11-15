@@ -1,0 +1,33 @@
+<div>
+    @if(compras){
+        <table class="table ">
+            <thead>
+                <tr>
+                    <th>ID pedido</th>
+                    <th>id Usuario</th>
+                    <th>Id cubo</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (compra of compras; track compras) {
+                    <tr>
+                        <td>
+                            {{compra.idPedido}}
+                        </td>
+                        <td>
+                            {{compra.idUsuario}}
+                        </td>
+                        <td>
+                            {{compra.idCubo}}
+                        </td>
+                        <td>
+                            {{compra.fechaPedido}}
+                        </td>
+                        
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>

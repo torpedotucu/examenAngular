@@ -1,0 +1,26 @@
+<div>
+    @if (marca) {
+        <div>
+            <h1>CUBOS DE LA MARCA {{marca}} </h1>
+        </div>
+        <hr style="color: red;">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            @for (cubo of cubos; track cubo) {
+               <div class="col">
+                   <div class="card" style="width: 18rem;">
+                       <img src={{cubo.imagen}} class="card-img-top" alt="...">
+                       <div class="card-body">
+                         <h5 class="card-title">{{cubo.nombre}}</h5>
+                       </div>
+                       <ul class="list-group list-group-flush">
+                         <li class="list-group-item">{{cubo.precio}} € </li>
+                       </ul>
+                       <div class="card-body">
+                           <a [routerLink]="['/detalles',cubo.idCubo]" class="btn btn-primary">Detalles</a>
+                       </div>
+                     </div>
+                 </div>
+            }
+       </div>
+    }
+</div>

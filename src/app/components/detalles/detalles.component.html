@@ -1,0 +1,43 @@
+<div>
+    @if (cubo) {
+    <div class="card" style="width: 18rem;">
+        <img src={{cubo.imagen}} class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{cubo.nombre}}</h5>
+
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><b>Valoracion: {{cubo.valoracion}}</b> </li>
+            <li class="list-group-item">{{cubo.precio}} € </li>
+            <li class="list-group-item">{{cubo.modelo}} </li>
+            <li class="list-group-item">{{cubo.color}} </li>
+        </ul>
+        <a [routerLink]="['/']" class="btn btn-primary">Volver</a>
+    </div>
+    <hr>
+    <h4>Comentarios</h4>
+    <br>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @for (comentario of comentarios; track comentario) {
+        <div class="col">
+            <div class="card text-center">
+                <div class="card-header">
+                  <b> User {{comentario.idUsuario}} comentó:</b>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        {{comentario.comentario}}
+                    </h5>   
+                </div>
+                <div class="card-footer text-body-secondary">
+                    {{comentario.fechaComentario}}
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+
+
+    }
+
+</div>
